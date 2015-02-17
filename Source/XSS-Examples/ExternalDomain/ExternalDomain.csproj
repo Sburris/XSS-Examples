@@ -7,12 +7,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{06A1F8C9-1CC5-46AD-89F7-24D6BFA4E369}</ProjectGuid>
+    <ProjectGuid>{AC04BEB0-0E4B-4455-897B-E34312DEE683}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>XSS_Examples</RootNamespace>
-    <AssemblyName>XSS-Examples</AssemblyName>
+    <RootNamespace>ExternalDomain</RootNamespace>
+    <AssemblyName>ExternalDomain</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
@@ -38,12 +38,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AntiXssLibrary">
-      <HintPath>..\packages\AntiXSS.4.3.0\lib\net40\AntiXssLibrary.dll</HintPath>
-    </Reference>
-    <Reference Include="HtmlSanitizationLibrary">
-      <HintPath>..\packages\AntiXSS.4.3.0\lib\net40\HtmlSanitizationLibrary.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -63,13 +57,6 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ContentSecurityExamples.aspx" />
-    <Content Include="default.aspx" />
-    <Content Include="HttpOnlyExamples.aspx" />
-    <Content Include="packages.config" />
-    <Content Include="Scripts\InternalFile.js" />
-    <Content Include="XssProtectionExample.aspx" />
-    <Content Include="XssReport.asmx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -78,69 +65,12 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DataStore.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="DomAttack.aspx" />
-    <Content Include="PersistentAttack.aspx" />
-    <Content Include="ReflectedAttack.aspx" />
+    <Content Include="index.html" />
+    <Content Include="Scripts\ExternalFile.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ContentSecurityExamples.aspx.cs">
-      <DependentUpon>ContentSecurityExamples.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ContentSecurityExamples.aspx.designer.cs">
-      <DependentUpon>ContentSecurityExamples.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="default.aspx.cs">
-      <DependentUpon>default.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="default.aspx.designer.cs">
-      <DependentUpon>default.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="DomAttack.aspx.cs">
-      <DependentUpon>DomAttack.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="DomAttack.aspx.designer.cs">
-      <DependentUpon>DomAttack.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="HttpOnlyExamples.aspx.cs">
-      <DependentUpon>HttpOnlyExamples.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="HttpOnlyExamples.aspx.designer.cs">
-      <DependentUpon>HttpOnlyExamples.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PersistentAttack.aspx.cs">
-      <DependentUpon>PersistentAttack.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PersistentAttack.aspx.designer.cs">
-      <DependentUpon>PersistentAttack.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ReflectedAttack.aspx.cs">
-      <DependentUpon>ReflectedAttack.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ReflectedAttack.aspx.designer.cs">
-      <DependentUpon>ReflectedAttack.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="XssProtectionExample.aspx.cs">
-      <DependentUpon>XssProtectionExample.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="XssProtectionExample.aspx.designer.cs">
-      <DependentUpon>XssProtectionExample.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="XssReport.asmx.cs">
-      <DependentUpon>XssReport.asmx</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -155,9 +85,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>12031</DevelopmentServerPort>
+          <DevelopmentServerPort>5539</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:11742/</IISUrl>
+          <IISUrl>http://localhost:12345/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

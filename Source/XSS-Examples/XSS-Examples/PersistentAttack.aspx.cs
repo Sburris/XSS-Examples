@@ -1,6 +1,5 @@
 ﻿using System;
 using System.IO;
-using System.Runtime.Remoting.Channels;
 using System.Web.UI;
 
 namespace XSS_Examples

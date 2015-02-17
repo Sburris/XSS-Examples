@@ -1,0 +1,1 @@
+﻿document.write('<br />EXTERNAL: This is written from an external js script file from this domain.');

@@ -10,7 +10,7 @@
 namespace XSS_Examples {
     
     
-    public partial class ReflectedAttack {
+    public partial class HttpOnlyExamples {
         
         /// <summary>
         /// form1 control.
@@ -22,13 +22,13 @@ namespace XSS_Examples {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// txtName control.
+        /// btnSendName0 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtName;
+        protected global::System.Web.UI.WebControls.Button btnSendName0;
         
         /// <summary>
         /// btnSendName1 control.
@@ -38,14 +38,5 @@ namespace XSS_Examples {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnSendName1;
-        
-        /// <summary>
-        /// litMessage control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal litMessage;
     }
 }

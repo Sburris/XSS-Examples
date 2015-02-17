@@ -7,12 +7,11 @@ using System.Web.UI.WebControls;
 
 namespace XSS_Examples
 {
-  public partial class DomAttack : System.Web.UI.Page
+  public partial class _default : System.Web.UI.Page
   {
     protected void Page_Load(object sender, EventArgs e)
     {
-      // Added to get around Chromes XSS Auditor, NOT RECOMMENDED
-      Response.Headers.Set("X-XSS-Protection", "0");
+
     }
   }
 }

@@ -10,7 +10,7 @@
 namespace XSS_Examples {
     
     
-    public partial class ReflectedAttack {
+    public partial class XssProtectionExample {
         
         /// <summary>
         /// form1 control.
@@ -20,6 +20,15 @@ namespace XSS_Examples {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        
+        /// <summary>
+        /// sm control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.ScriptManager sm;
         
         /// <summary>
         /// txtName control.
@@ -38,6 +47,33 @@ namespace XSS_Examples {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnSendName1;
+        
+        /// <summary>
+        /// btnSendName2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnSendName2;
+        
+        /// <summary>
+        /// btnSendName3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnSendName3;
+        
+        /// <summary>
+        /// btnSendName4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnSendName4;
         
         /// <summary>
         /// litMessage control.
